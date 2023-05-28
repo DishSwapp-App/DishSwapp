@@ -1,0 +1,1 @@
+export const CLERK_KEY = "pk_test_Z3VpZGVkLWNyb3ctNjYuY2xlcmsuYWNjb3VudHMuZGV2JA" 
