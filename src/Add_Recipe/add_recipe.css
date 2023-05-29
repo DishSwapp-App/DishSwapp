@@ -1,0 +1,17 @@
+
+
+.form-group{
+
+    margin: 10px;
+}
+
+button{
+
+    margin: 5px;
+}
+
+
+body {
+    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
+    animation: gradient-animation 15s ease infinite;
+  }

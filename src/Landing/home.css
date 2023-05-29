@@ -1,0 +1,12 @@
+
+
+.lead{
+
+    font-family: Playfair !important;
+    font-size: 25px;
+}
+
+.jumbotron{
+    width: 80% !important;
+    margin: auto;
+}
