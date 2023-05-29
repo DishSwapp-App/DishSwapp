@@ -1,11 +1,11 @@
 import React from 'react';
 import { Link } from 'wouter';
 import "./home.css"
-//<SignIn /> need to show this component when the login button is clicked
 const Landing = () => {
   return (
     <>
-      <section className="jumbotron text-center" style={{ backgroundColor: '#8bc34a' }}>
+    <div className='landing'>
+      <section className="jumbotron text-center">
         <div className="container">
           <h1 className="jumbotron-heading text-white mb-4">Welcome to DishSwapp</h1>
           <p className="lead text-white">Collect, Collaborate, Cook.</p>
@@ -52,6 +52,7 @@ const Landing = () => {
           </div>
         </div>
       </section>
+      </div>
     </>
     
     )}

@@ -1,22 +1,33 @@
+:root {
+    --pink: #F9B7A4;
+    --blue: #3D717C;
+  }
+
 li{
     margin: 5px;
     text-decoration: none;
+    border-radius: 3px;
+    padding: 5px;
+
 }
 
 .navbar-nav li{
-    padding: 3px;
+    padding: 5px;
 
 }
 
 .navbar-nav li:hover {
-    background-color: #8bc34a;
-    transition-delay: 0.1s;
+    background: linear-gradient(to bottom right, #F9B7A4, #3D717C);
+    transition-delay: 0.3s;
     color: white;
+    
   }
   
 .link{
     text-decoration: none;
     color: black;
+    padding: 5px;
+
 }
 
 .navbar-nav li .link:hover {

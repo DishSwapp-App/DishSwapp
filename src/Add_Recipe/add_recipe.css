@@ -10,8 +10,7 @@ button{
     margin: 5px;
 }
 
-
-body {
-    background: linear-gradient(to right, #ff6e7f, #bfe9ff);
-    animation: gradient-animation 15s ease infinite;
-  }
+.recipe_container{
+    background: linear-gradient(to bottom right, #F9B7A4, #3D717C);
+    height: 100vh;
+}

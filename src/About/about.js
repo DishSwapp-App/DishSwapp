@@ -1,8 +1,9 @@
 import React from 'react';
+import "./about.css"
 
 function About() {
   return (
-    <div>
+    <div className='about'>
       <style>
         {`
           .hero-image {

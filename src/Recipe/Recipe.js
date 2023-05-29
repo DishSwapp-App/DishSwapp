@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useRoute } from "wouter";
 import faunadb, { query as q } from 'faunadb';
 import "./recipe.css"
+import Lottie from "lottie-react"
+import animation from "./loader.json"
 
 const client = new faunadb.Client({ secret: 'fnAFFFdVycAAUQIYdaKZBTm_cMJQeKQoOKMcfDXM' });
 
@@ -38,21 +40,21 @@ function Recipe(){
   }, [recipeId]);
 
   if (error) return <div>Error: {error}</div>;
-  if (!recipe) return <div>Loading...</div>;
+  if (!recipe) return <div><Lottie animationData={animation}/></div>;
 
   return (
     <div className="recipe_container">
       <h1>{recipe.recipeTitle}</h1>
-      <img src={recipe.imageUrl} alt={recipe.recipeTitle} width="500"/>
+      <img src={recipe.imageUrl} alt={recipe.recipeTitle} className="recipeImg" width="auto"/>
 
       <div className="ingredients">
-      <h4>ingredients:</h4> 
+      <h4>Ingredients:</h4> 
       <p>{recipe.recipeIngredients}</p>
 
 
       </div>
 
-      <div> 
+      <div className="instructions"> 
       <h4>Instructions:</h4> 
       <p>{recipe.recipeInstructions}</p>
           

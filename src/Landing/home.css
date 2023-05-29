@@ -1,4 +1,8 @@
 
+:root {
+    --pink: #F9B7A4;
+    --blue: #3D717C;
+  }
 
 .lead{
 
@@ -7,6 +11,71 @@
 }
 
 .jumbotron{
-    width: 80% !important;
-    margin: auto;
+    background-color: var(--pink) !important;
 }
+
+.landing{
+    height: 70vh;
+}
+    
+    .jumbotron-heading {
+    font-size: 40px;
+    font-weight: 700;
+   
+    }
+    
+    .lead {
+    font-size: 20px;
+    font-weight: 400;
+   
+    }
+    
+    .btn-danger {
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    }
+    
+   .btn-danger:hover {
+    background-color: whi4;
+    cursor: pointer;
+    border-radius: 10px;
+}
+    
+    .btn-danger:focus {
+    outline: none;
+    }
+    
+    .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-img-top {
+    border-radius: 100px 10px 0px 10px;
+    }
+    
+    .card-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+    
+    .card-text {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+    }

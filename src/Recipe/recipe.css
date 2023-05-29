@@ -2,3 +2,12 @@
 
     margin: 5px;
 }
+
+.recipeImg{
+    max-width: 100%;
+    height: auto;
+    }
+
+.instructions{
+    width: 60vw;
+}

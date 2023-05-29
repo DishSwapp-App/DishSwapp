@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'wouter';
+import "./dashboard.css"
 const Dashboard = () => {
   return (
     <div>
