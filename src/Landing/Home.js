@@ -3,6 +3,7 @@ import { Link } from 'wouter';
 import "./home.css"
 import anim from "./food.json"
 import Lottie from "lottie-react"
+import Footer from '../Footer/footer';
 
 const Landing = () => {
   return (
@@ -69,6 +70,10 @@ const Landing = () => {
       </div> 
       
       </section>
+
+      <div>
+        <Footer/>
+      </div>
     </>
     
     )}
