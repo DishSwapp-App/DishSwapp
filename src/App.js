@@ -6,14 +6,15 @@ import {
   ClerkProvider,
   
 } from "@clerk/clerk-react";
+//Pages import
 import Landing from './Landing/Home';
 import Login from './Login/LoginPage';
-import AddRecipe from './Add_Recipe/addRecipe';
+import AddRecipePage from './Add_Recipe/add_recipe_page';
 import NavigationBar from './Nav/nav';
 import About from './About/about';
 import Feed from './Feed/feed';
 import Recipe from './Recipe/Recipe';
-
+import DashboardPage from './Dashboard/DashboardPage';
 
 const clerkPubKey = CLERK_KEY;
 
@@ -24,15 +25,24 @@ function App() {
     <NavigationBar />
     <Router>
     <Switch>
-    <Route path="/dashboard" component={Login}></Route>
+    <Route path="/login" component={Login}></Route>
     <Route path='/' component={Landing}></Route>
-    <Route path='/add_recipe' component={AddRecipe}></Route>
     <Route path="/about" component={About}></Route>
+    
+
+    <Route path="/dashboard" component={DashboardPage}></Route>
+
+
+    <Route path='/add_recipe' component={AddRecipePage}></Route>
     <Route path="/feed" component={Feed}></Route>
     <Route path="/recipes/:id" component={Recipe} />
 
+
+    
+
     </Switch>
     </Router>
+  
     </div>
     </ClerkProvider>
   );

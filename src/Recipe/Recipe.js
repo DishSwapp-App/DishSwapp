@@ -4,7 +4,6 @@ import faunadb, { query as q } from 'faunadb';
 import "./recipe.css"
 import Lottie from "lottie-react"
 import animation from "./loader.json"
-
 const client = new faunadb.Client({ secret: 'fnAFFFdVycAAUQIYdaKZBTm_cMJQeKQoOKMcfDXM' });
 
 function Recipe(){

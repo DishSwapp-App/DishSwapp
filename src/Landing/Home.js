@@ -1,7 +1,12 @@
 import React from 'react';
 import { Link } from 'wouter';
 import "./home.css"
+import anim from "./food.json"
+import Lottie from "lottie-react"
+
 const Landing = () => {
+  const key = process.env.FAUNA_KEY
+  console.log(key)
   return (
     <>
     <div className='landing'>
@@ -53,6 +58,19 @@ const Landing = () => {
         </div>
       </section>
       </div>
+
+      <section className='endpage'>
+
+      <h3>Start Exploring Recipes</h3>
+     
+      <div className='animation'>
+
+      
+
+      <Lottie animationData={anim}></Lottie>
+      </div> 
+      
+      </section>
     </>
     
     )}

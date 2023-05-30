@@ -1,10 +1,10 @@
 import React from 'react';
+import "./loginPage.css"
+
 import {SignIn,
 
-    SignedIn,
-    SignedOut
+
   } from "@clerk/clerk-react";
-  import Dashboard from '../Dashboard/dashboard';
 
 
 function Login() {
@@ -16,17 +16,15 @@ function Login() {
         <div className='login'>
         
 
-        <SignedOut>
+      
         <SignIn/>
-        </SignedOut>
+
 
         </div>
 
         
 
-        <SignedIn>
-        <Dashboard />
-        </SignedIn>
+    
 
 
 

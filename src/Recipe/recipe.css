@@ -11,3 +11,49 @@
 .instructions{
     width: 60vw;
 }
+
+.recipe_container {
+    background-color: #F9B7A4;
+    color: #3D717C;
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    }
+    
+    .recipe_container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    }
+    
+    .recipeImg {
+    display: block;
+    margin: 2rem auto;
+    max-width: 100%;
+    height: auto;
+    }
+    
+    .ingredients {
+    margin-bottom: 2rem;
+    }
+    
+    .ingredients h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    }
+    
+    .ingredients p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    }
+    
+    .instructions h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    }
+    
+    .instructions p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    }

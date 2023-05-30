@@ -1,13 +1,11 @@
-.Login{
-
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-}
+.Login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
 
 .login{
 
-    margin-left: auto;
-    margin-right: auto;
-
+   margin-top: 20px;
+  
 }

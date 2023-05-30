@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'wouter';
 import getAllRecipes from './getAllRecipes';
+import { LazyLoadComponent } from 'react-lazy-load-image-component';
+
 
 const Feed = () => {
   const [recipes, setRecipes] = useState([]);
@@ -16,9 +18,11 @@ const Feed = () => {
   console.log(recipes)
 
   return (
+    <LazyLoadComponent>
     <div className="container">
       <h1>Recipes</h1>
       <hr />
+     
       <div className="row row-cols-1 row-cols-md-3 g-4">
         {recipes.map(recipe => (
           <div key={recipe.ref.id} className="col">
@@ -31,9 +35,11 @@ const Feed = () => {
               </div>
             </div>
           </div>
+          
         ))}
       </div>
     </div>
+    </LazyLoadComponent>
   );
 };
 

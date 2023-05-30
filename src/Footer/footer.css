@@ -1,0 +1,26 @@
+.footer {
+    background-color: #3d717c;
+    color: white;
+   position: relative;
+
+    width: 100%;
+ 
+  }
+  
+  .twitter-icon {
+    color: #f9b7a4;
+    margin-right: 10px;
+  }
+  
+  .twitter-icon:hover {
+    color: white;
+  }
+  
+  .text-muted {
+    color: white !important;
+  }
+
+  .img-fluid{
+
+    width: 150px;
+  }
