@@ -5,8 +5,6 @@ import anim from "./food.json"
 import Lottie from "lottie-react"
 
 const Landing = () => {
-  const key = process.env.FAUNA_KEY
-  console.log(key)
   return (
     <>
     <div className='landing'>

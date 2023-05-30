@@ -1,6 +1,8 @@
 import faunadb, { query as q } from 'faunadb';
 
-const client = new faunadb.Client({ secret: 'fnAFFFdVycAAUQIYdaKZBTm_cMJQeKQoOKMcfDXM' });
+
+const fauna_key = process.env.REACT_APP_FAUNA_KEY
+const client = new faunadb.Client({ secret: fauna_key });
 
 async function getAllRecipes() {
   try {

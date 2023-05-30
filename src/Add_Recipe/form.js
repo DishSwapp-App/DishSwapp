@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import { useForm } from "react-hook-form";
 import "./add_recipe.css";
 import { Create, Collection } from "faunadb";
@@ -7,12 +7,14 @@ import { Tooltip as ReactTooltip } from "react-tooltip";
 import { useUser } from "@clerk/clerk-react";
 
 export default function Form() {
+  const [imageUrl, setImageUrl] = useState('');
   const user = useUser();
   const username = user.user.username;
-  console.log(username);
+  const fauna_key =process.env.REACT_APP_FAUNA_KEY
+  const img_key= process.env.REACT_APP_IMG_KEY 
 
   const client = new faunadb.Client({
-    secret: "fnAFFFdVycAAUQIYdaKZBTm_cMJQeKQoOKMcfDXM",
+    secret: fauna_key,
   });
 
   const handleImageUpload = async (event) => {
@@ -26,7 +28,7 @@ export default function Form() {
 
       // Upload the image to Imgbb and get the URL
       const payload = {
-        key: "d1e7bfb26e41548bb635c550cf75d0c0",
+        key: img_key,
         image: imageData,
       };
       const response = await fetch("https://api.imgbb.com/1/upload", {
@@ -35,7 +37,7 @@ export default function Form() {
       });
       const responseJson = await response.json();
       const imageUrl = responseJson.data.image.url;
-      console.log(imageUrl);
+      setImageUrl(imageUrl);
     };
   };
 
@@ -63,7 +65,7 @@ export default function Form() {
 
           // Upload the image to Imgbb and get the URL
           const payload = {
-            key: "d1e7bfb26e41548bb635c550cf75d0c0",
+            key: img_key,
             image: imageData,
           };
           const response = await fetch("https://api.imgbb.com/1/upload", {
@@ -78,7 +80,7 @@ export default function Form() {
             const result = await client.query(
               Create(Collection("recipes"), {
                 data: {
-                  authorName,
+                  authorName : username,
                   recipeTitle,
                   recipeIngredients,
                   recipeInstructions,
@@ -87,6 +89,7 @@ export default function Form() {
               })
             );
             console.log(result);
+            window.location.reload()
           } catch (error) {
             console.error(error);
           }
@@ -96,14 +99,14 @@ export default function Form() {
         const result = await client.query(
           Create(Collection("recipes"), {
             data: {
-              authorName,
+              authorName: username,
               recipeTitle,
               recipeIngredients,
               recipeInstructions,
             },
           })
         );
-        console.log(result);
+        console.log(result, authorName);
         window.location.reload();
       }
     } catch (error) {
@@ -171,6 +174,7 @@ export default function Form() {
           name="recipeImage"
           onChange={handleImageUpload}
         />
+         {imageUrl && <img src={imageUrl} alt="Uploaded Recipe" />}
       </div>
 
       <button type="submit" className="btn btn-primary" onClick={handleSubmit}>

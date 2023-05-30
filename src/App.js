@@ -1,5 +1,4 @@
 import './App.css';
-import { CLERK_KEY } from './key';
 import { Router, Route, Switch } from "wouter";
 import {
 
@@ -16,7 +15,7 @@ import Feed from './Feed/feed';
 import Recipe from './Recipe/Recipe';
 import DashboardPage from './Dashboard/DashboardPage';
 
-const clerkPubKey = CLERK_KEY;
+const clerkPubKey = process.env.REACT_APP_CLERK_KEY;
 
 function App() {
   return (
