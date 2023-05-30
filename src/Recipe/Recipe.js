@@ -1,14 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { useRoute } from "wouter";
+import { useRoute, useLocation } from "wouter";
 import faunadb, { query as q } from 'faunadb';
 import "./recipe.css"
 import Lottie from "lottie-react"
 import animation from "./loader.json"
+import SharePage from "../Share/share";
+
+
 
 const fauna_key = process.env.REACT_APP_FAUNA_KEY
 const client = new faunadb.Client({ secret: fauna_key });
-
 function Recipe(){
+  const [location] = useLocation();
+  const pageLink = window.location.origin + location;
   const params = useRoute("/recipes/:id");
   const recipeId = params[1].id
   const [recipe, setRecipe] = useState(null);
@@ -60,6 +64,8 @@ function Recipe(){
       <p>{recipe.recipeInstructions}</p>
           
       </div>
+
+      <SharePage pageLink={pageLink} />
 
     </div>
   );
