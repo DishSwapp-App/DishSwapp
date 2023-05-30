@@ -31,7 +31,7 @@ const Dashboard = () => {
             <div className="card-body">
               <h5 className="card-title">My Virtual CookBook</h5>
               <p className="card-text">View and manage your uploaded recipes.</p>
-              <button type="button"  className="btn btn-primary btn-lg btn-block" disabled>My Cookbook(coming soon)</button>
+              <Link href='/cookbook'><button type="button"  className="btn btn-primary btn-lg btn-block">My Cookbook</button></Link>
             </div>
           </div>
         </div>

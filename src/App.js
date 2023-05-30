@@ -14,6 +14,7 @@ import About from './About/about';
 import Feed from './Feed/feed';
 import Recipe from './Recipe/Recipe';
 import DashboardPage from './Dashboard/DashboardPage';
+import Cookbook from './Cookbook/Cookbook';
 
 const clerkPubKey = process.env.REACT_APP_CLERK_KEY;
 
@@ -35,6 +36,8 @@ function App() {
     <Route path='/add_recipe' component={AddRecipePage}></Route>
     <Route path="/feed" component={Feed}></Route>
     <Route path="/recipes/:id" component={Recipe} />
+    <Route path="/cookbook" component={Cookbook} />
+
 
 
     
