@@ -1,0 +1,20 @@
+.hidden{
+    display: none;
+}
+
+.avatar{
+
+    width: 30px;
+    ;
+}
+
+
+.comment_group{
+
+    display: flex;
+}
+
+.comment_group_button{
+    padding: 0px;
+    height: 100%;
+}

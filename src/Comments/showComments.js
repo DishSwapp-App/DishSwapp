@@ -1,40 +1,46 @@
-import React, {useState, useEffect} from 'react';
-import { Comment } from 'semantic-ui-react';
-import getAllComments from './getAllComments';
+import React, { useState, useEffect } from "react";
+import { Comment } from "semantic-ui-react";
+import getCommentsByRecipeId from "./getAllComments";
+import { useUser } from "@clerk/clerk-react";
+import "./comments.css";
 
+function Comments(recipe_id) {
+  const user = useUser();
+  const dishswapp_user = user.user;
 
-function Comments() {
   const [comments, setcomments] = useState([]);
+  const profile_pic = dishswapp_user.profileImageUrl;
+  const RECIPE_ID = recipe_id.recipe_id;
+  console.log(RECIPE_ID);
 
-
-    useEffect(() => {
-        async function fetchData() {
-          const result = await getAllComments(); 
-          setcomments(result);
-        }
-        fetchData();
-      }, []);
-
-
-      return (
-        <Comment.Group>
-          {comments.map((comment, index) => (
-            <Comment key={index}>
-              <Comment.Avatar as='a' src='https://react.semantic-ui.com/images/avatar/small/joe.jpg' />
-              <Comment.Content>
-                <Comment.Author><b> {comment.username} </b></Comment.Author>
-                <Comment.Text>
-                  {comment.comment}
-                </Comment.Text>
-              </Comment.Content>
-             <hr></hr>
-            </Comment>
-            
-          ))}
-          
-        </Comment.Group>
-      );
+  useEffect(() => {
+    async function fetchData() {
+      const result = await getCommentsByRecipeId(RECIPE_ID);
+      setcomments(result);
     }
+    fetchData();
+  }, [RECIPE_ID]);
 
+  return (
+    <Comment.Group>
+      {comments.map((comment, index) => (
+        <Comment key={index}>
+          <img
+            src={profile_pic}
+            style={{ height: "40px", width: "40px", borderRadius: "50%" }}
+            alt="avatar"
+          />
+          <Comment.Content>
+            <Comment.Author>
+              <b> {comment.data.username} </b>
+            </Comment.Author>
+            <Comment.Text>{comment.data.comment}</Comment.Text>
+          </Comment.Content>
+          <hr></hr>
+        </Comment>
+      ))}
+    </Comment.Group>
+  );
+}
 
-export default Comments
+export default Comments;

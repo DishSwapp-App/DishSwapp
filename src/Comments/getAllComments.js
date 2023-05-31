@@ -7,22 +7,20 @@ const client = new faunadb.Client({
     secret: fauna_key,
   });
 
-const getAllComments = async () => {
+  async function getCommentsByRecipeId(recipeId) {
     try {
       const result = await client.query(
         q.Map(
-            q.Paginate(q.Match(q.Index('all_comments'))),
-            q.Lambda('ref', q.Get(q.Var('ref')))
-          )
+          q.Paginate(q.Match(q.Index('comments_by_recipeId'), recipeId)),
+          q.Lambda('comment', q.Get(q.Var('comment')))
+        )
       );
   
-      const comments = result.data.map((comment) => comment.data);
-      console.log("All comments: ", comments);
-  
-      return comments;
+      return result.data;
     } catch (error) {
-      console.log("Error getting comments: ", error);
+      console.log(error);
     }
-  };
+  }
+     
 
-export default getAllComments
+export default getCommentsByRecipeId
