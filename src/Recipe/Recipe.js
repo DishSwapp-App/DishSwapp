@@ -5,8 +5,8 @@ import "./recipe.css"
 import Lottie from "lottie-react"
 import animation from "./loader.json"
 import SharePage from "../Share/share";
-
-
+import CommentForm from "../Comments/commentForm";
+import Comments from "../Comments/showComments";
 
 const fauna_key = process.env.REACT_APP_FAUNA_KEY
 const client = new faunadb.Client({ secret: fauna_key });
@@ -17,8 +17,6 @@ function Recipe(){
   const recipeId = params[1].id
   const [recipe, setRecipe] = useState(null);
   const [error, setError] = useState(null);
-
-  console.log(params[1].id)
 
   useEffect(() => {
     async function getRecipe() {
@@ -62,10 +60,25 @@ function Recipe(){
       <div className="instructions"> 
       <h4>Instructions:</h4> 
       <p>{recipe.recipeInstructions}</p>
-          
+
       </div>
 
+      
+
       <SharePage pageLink={pageLink} />
+
+      <div className="comments">
+
+      <h3>Comments</h3> 
+
+      <Comments />
+
+      <CommentForm recipe_id={recipeId}/>
+
+      
+
+        
+      </div>
 
     </div>
   );

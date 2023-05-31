@@ -1,5 +1,4 @@
 import React from 'react';
-import style from "./footer.module.css"
 import {TwitterIcon} from "react-share"
 
 const Footer = () => {
