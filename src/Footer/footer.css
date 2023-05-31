@@ -1,5 +1,5 @@
 footer {
-    background-color: #3d717c;
+    background-color: #3d717c !important;
     color: white;
    position: relative;
 
@@ -8,7 +8,7 @@ footer {
   }
   
   .twitter-icon {
-    color: #f9b7a4;
+    color: #f9b7a4 !important;
     margin-right: 10px;
   }
   

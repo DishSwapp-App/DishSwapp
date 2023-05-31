@@ -1,5 +1,6 @@
 import React from 'react';
 import {TwitterIcon} from "react-share"
+import "./footer.css"
 
 const Footer = () => {
   return (
