@@ -4,7 +4,7 @@ import getUserRecipes from './getUserRecipes';
 import { LazyLoadComponent } from 'react-lazy-load-image-component';
 import { useUser } from "@clerk/clerk-react";
 import styles from "./cookbook.module.css"
-
+import DeleteDocumentButton from './Delete';
 
 
 const Cookbook = () => {
@@ -42,6 +42,8 @@ const Cookbook = () => {
                 <Link to={`/recipes/${recipe.ref.id}`} className="btn btn-primary">View Recipe</Link>
               </div>
             </div>
+          <DeleteDocumentButton ref_Id={recipe.ref.id}/>
+         
           </div>
           
         ))}
