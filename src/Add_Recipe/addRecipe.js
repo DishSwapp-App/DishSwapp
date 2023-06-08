@@ -1,7 +1,7 @@
 import Form from "./form";
 function AddRecipe() {
     return (
-    <div className="">
+    <div className="add_recipe">
     <br>
 
     </br>
@@ -16,7 +16,7 @@ function AddRecipe() {
 
 
 
-            <div className="add_recipe_form_div">
+            <div className="outer_form">
             <h3>Add Recipe</h3>
             <br>
 

@@ -15,6 +15,8 @@ import Feed from './Feed/feed';
 import Recipe from './Recipe/Recipe';
 import DashboardPage from './Dashboard/DashboardPage';
 import Cookbook from './Cookbook/Cookbook';
+import Donate from './Donate/donate';
+
 
 const clerkPubKey = process.env.REACT_APP_CLERK_KEY;
 
@@ -38,8 +40,7 @@ function App() {
     <Route path="/recipes/:id" component={Recipe} />
     <Route path="/cookbook" component={Cookbook} />
 
-
-
+    <Route path="/donate" component={Donate} />
     
 
     </Switch>

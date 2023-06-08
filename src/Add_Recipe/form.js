@@ -116,7 +116,7 @@ export default function Form() {
   console.log(errors);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className="add_recipe_form">
       <div className="form-group">
         <label htmlFor="authorName">Author Name</label>
         <input
