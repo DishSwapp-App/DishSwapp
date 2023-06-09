@@ -1,9 +1,14 @@
+/* Instructions:
+For all styles in nav.js they must have the class "navbar" before it,
+then the class.
+*/
+
 :root {
     --pink: #F9B7A4;
     --blue: #3D717C;
   }
 
-li{
+.navbar li{
     margin: 5px;
     text-decoration: none;
     border-radius: 3px;
@@ -11,38 +16,38 @@ li{
 
 }
 
-.navbar-nav li{
+.navbar .navbar-nav li{
     padding: 5px;
 
 }
 
-.navbar-nav li:hover {
+.navbar .navbar-nav li:hover {
     background: linear-gradient(to bottom right, #F9B7A4, #3D717C);
     transition-delay: 0.3s;
     color: white;
     
   }
   
-.link{
+.navbar .link{
     text-decoration: none;
     color: black;
     padding: 5px;
 
 }
 
-.navbar-nav li .link:hover {
+.navbar .navbar-nav li .link:hover {
     color: white;
 
 
 }
 
-.sign_in{
+.navbar .sign_in{
     width: max-content;
     margin: 5px;
 
 }
 
-.app_name{
+.navbar .app_name{
 
     margin-right: 5px;
 }

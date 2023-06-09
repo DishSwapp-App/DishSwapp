@@ -4,7 +4,7 @@ import { Create, Collection } from "faunadb";
 import faunadb from "faunadb";
 import "./comments.css";
 
-function CommentForm(recipe_id ) {
+function CommentForm(recipe_id) {
   const fauna_key = process.env.REACT_APP_FAUNA_KEY;
   const client = new faunadb.Client({
     secret: fauna_key,
@@ -42,16 +42,15 @@ function CommentForm(recipe_id ) {
       );
 
       console.log("Comment created: ", result.data);
-      window.location.reload()
+      window.location.reload();
 
       // Set the refreshShowComponent state variable to true
-      
     } catch (error) {
       console.log("Error creating comment: ", error);
     }
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="comment_form">
       <input
         type="text"
         placeholder="Username"
@@ -76,10 +75,11 @@ function CommentForm(recipe_id ) {
           type="text"
           placeholder="Add a comment..."
           name="comment"
+          required
           onChange={handleChange}
         />
 
-        <button type="submit" className="comment_group_button">
+        <button type="submit" className="btn btn-primary comment_group_button">
           {" "}
           Add Comment
         </button>

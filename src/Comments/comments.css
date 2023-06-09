@@ -1,20 +1,21 @@
-.hidden{
+.comment_form .hidden{
     display: none;
 }
 
-.avatar{
+.comment_form .avatar{
 
     width: 30px;
     ;
 }
 
 
-.comment_group{
+.comment_form .comment_group{
 
     display: flex;
+    margin-top: 20px;
 }
 
-.comment_group_button{
-    padding: 0px;
+.comment_form .comment_group_button{
+    padding: 7px;
     height: 100%;
 }

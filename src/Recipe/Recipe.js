@@ -11,7 +11,6 @@ import Comments from "../Comments/showComments";
 const fauna_key = process.env.REACT_APP_FAUNA_KEY;
 const client = new faunadb.Client({ secret: fauna_key });
 function Recipe() {
-
   const [location] = useLocation();
   const pageLink = window.location.origin + location;
   const params = useRoute("/recipes/:id");
@@ -72,13 +71,14 @@ function Recipe() {
       <SharePage pageLink={pageLink} />
 
       <div className="comments">
-        <CommentForm
-          recipe_id={recipeId}
-                 />
+        <CommentForm recipe_id={recipeId} />
+
+        <br></br>
 
         <h3>Comments</h3>
+        <hr></hr>
 
-        <Comments recipe_id={recipeId}/>
+        <Comments recipe_id={recipeId} />
       </div>
     </div>
   );

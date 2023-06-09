@@ -1,34 +1,21 @@
 import Form from "./form";
+import "./add_recipe.css";
 function AddRecipe() {
-    return (
+  return (
     <div className="add_recipe">
-    <br>
+      <br></br>
+      <br></br>
 
-    </br>
-    <br>
+      <br></br>
 
-</br>
+      <div className="form_section">
+        <h3>Add Recipe</h3>
+        <br></br>
 
-    
-    <br>
-
-</br>
-
-
-
-            <div className="outer_form">
-            <h3>Add Recipe</h3>
-            <br>
-
-</br>
-            
-            <Form />
-            </div>
-   
-  
-
+        <Form />
+      </div>
     </div>
-    );
-    }
-    
-    export default AddRecipe;
+  );
+}
+
+export default AddRecipe;

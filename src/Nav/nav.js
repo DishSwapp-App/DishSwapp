@@ -45,6 +45,10 @@ function NavigationBar() {
           <li className="nav-item">
             <Link href="/about" className="link">About</Link>
           </li>
+
+          <li className="nav-item">
+          <Link href="/donate" className="link">Donate</Link>
+          </li>
         </ul>
 
         <div className="sign_in">

@@ -23,22 +23,26 @@ function Comments(recipe_id) {
 
   return (
     <Comment.Group>
-      {comments.map((comment, index) => (
-        <Comment key={index}>
-          <img
-            src={profile_pic}
-            style={{ height: "40px", width: "40px", borderRadius: "50%" }}
-            alt="avatar"
-          />
-          <Comment.Content>
-            <Comment.Author>
-              <b> {comment.data.username} </b>
-            </Comment.Author>
-            <Comment.Text>{comment.data.comment}</Comment.Text>
-          </Comment.Content>
-          <hr></hr>
-        </Comment>
-      ))}
+      {comments.length > 0 ? (
+        comments.map((comment, index) => (
+          <Comment key={index}>
+            <img
+              src={profile_pic}
+              style={{ height: "40px", width: "40px", borderRadius: "50%" }}
+              alt="avatar"
+            />
+            <Comment.Content>
+              <Comment.Author>
+                <b> {comment.data.username} </b>
+              </Comment.Author>
+              <Comment.Text>{comment.data.comment}</Comment.Text>
+            </Comment.Content>
+            <hr></hr>
+          </Comment>
+        ))
+      ) : (
+        <p className="no-comments">No comments yet...</p>
+      )}
     </Comment.Group>
   );
 }
