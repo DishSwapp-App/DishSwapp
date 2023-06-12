@@ -5,15 +5,14 @@ import { ClerkProvider } from "@clerk/clerk-react";
 //Pages import
 import Landing from "./Landing/Home";
 import Login from "./Login/LoginPage";
-import AddRecipePage from "./Add_Recipe/add_recipe_page";
 import NavigationBar from "./Nav/nav";
 import About from "./About/about";
 import DashboardPage from "./Dashboard/DashboardPage";
-import Cookbook from "./Cookbook/Cookbook";
 import Donate from "./Donate/donate";
-import TestRecipe from "./Recipe/testRecipe";
+import SanityRecipe from "./Recipe/sanityRecipe";
 import RecipeFeed from "./Feed/recipeFeed";
-
+import SanityCookbook from "./Cookbook/SanityCookbook";
+import AddRecipePage from "./Add_Recipe/add_recipe_page";
 const clerkPubKey = process.env.REACT_APP_CLERK_KEY;
 
 function App() {
@@ -31,8 +30,8 @@ function App() {
 
             <Route path="/add_recipe" component={AddRecipePage}></Route>
             <Route path="/feed" component={RecipeFeed}></Route>
-            <Route path="/recipes/:id" component={TestRecipe} />
-            <Route path="/cookbook" component={Cookbook} />
+            <Route path="/recipes/:id" component={SanityRecipe} />
+            <Route path="/cookbook" component={SanityCookbook} />
 
             <Route path="/donate" component={Donate} />
           </Switch>

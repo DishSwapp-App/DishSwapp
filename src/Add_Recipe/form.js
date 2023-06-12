@@ -1,5 +1,7 @@
 import React, { useState, useRef } from "react";
 import { useForm } from "react-hook-form";
+import "filepond/dist/filepond.min.css";
+import { FilePond } from "react-filepond";
 import "./add_recipe.css";
 import { Create, Collection } from "faunadb";
 import faunadb from "faunadb";
@@ -178,13 +180,7 @@ export default function Form() {
           <label htmlFor="recipeImage" className="custom-file-upload">
             Upload Recipe Image:
           </label>
-          <input
-            type="file"
-            className="form-control-file"
-            id="recipeImage"
-            name="recipeImage"
-            onChange={handleImageUpload}
-          />
+          <FilePond allowMultiple={false} onupdatefiles={handleImageUpload} />
           {imageUrl && <img src={imageUrl} alt="Uploaded Recipe" />}
         </div>
 

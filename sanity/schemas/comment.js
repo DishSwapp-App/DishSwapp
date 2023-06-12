@@ -4,20 +4,21 @@ export default {
   type: 'document',
   fields: [
     {
-      name: 'avatarImage',
-      title: 'Avatar Image',
-      type: 'image',
+      name: 'author',
+      title: 'Author',
+      type: 'text',
+    },
+    {
+      name: 'avatarImageURL',
+      title: 'Avatar Image URL',
+      type: 'string',
     },
     {
       name: 'text',
       title: 'Text',
       type: 'string',
     },
-    {
-      name: 'author',
-      title: 'Author',
-      type: 'text',
-    },
+
     {
       name: 'recipeID',
       title: 'Recipe ID',

@@ -3,7 +3,14 @@ import { Modal, Button } from "react-bootstrap";
 import React, { useRef, useState } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useForm } from "react-hook-form";
+import "./add_recipe.css";
 import { Tooltip as ReactTooltip } from "react-tooltip";
+import { FilePond, registerPlugin } from "react-filepond";
+import "filepond/dist/filepond.min.css";
+import FilePondPluginImagePreview from "filepond-plugin-image-preview";
+import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
+
+registerPlugin(FilePondPluginImagePreview);
 
 function SanityForm() {
   const img_key = process.env.REACT_APP_IMG_KEY;
@@ -21,28 +28,32 @@ function SanityForm() {
 
   const username = user.user.username;
 
-  const handleImageUpload = async (event) => {
-    const file = event.target.files[0];
-    const reader = new FileReader();
+  const handleImageUpload = async (files) => {
+    try {
+      const reader = new FileReader();
 
-    reader.readAsDataURL(file);
+      reader.readAsDataURL(files);
 
-    reader.onload = async () => {
-      const imageData = reader.result.split(",")[1];
+      reader.onload = async () => {
+        const imageData = reader.result.split(",")[1];
 
-      // Upload the image to Imgbb and get the URL
-      const payload = {
-        key: img_key,
-        image: imageData,
+        // Upload the image to Imgbb and get the URL
+        const payload = {
+          key: img_key,
+          image: imageData,
+        };
+        const response = await fetch("https://api.imgbb.com/1/upload", {
+          method: "POST",
+          body: new URLSearchParams(payload),
+        });
+        const responseJson = await response.json();
+        const imageUrl = responseJson.data.image.url;
+        setImageUrl(imageUrl);
+        console.log(imageUrl);
       };
-      const response = await fetch("https://api.imgbb.com/1/upload", {
-        method: "POST",
-        body: new URLSearchParams(payload),
-      });
-      const responseJson = await response.json();
-      setImageUrl(responseJson.data.image.url);
-      console.log(imageUrl);
-    };
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   const onSubmit = async (data) => {
@@ -123,16 +134,17 @@ function SanityForm() {
           </div>
 
           <div className="form-group">
-            <label htmlFor="recipeImage" className="custom-file-upload">
-              Upload Recipe Image:
-            </label>
-            <input
-              type="file"
-              className="form-control-file"
-              id="recipeImage"
-              name="recipeImage"
-              accept="image/*"
-              onChange={handleImageUpload}
+            <label htmlFor="recipeImage">Recipe Image</label>
+
+            <FilePond
+              allowMultiple={false}
+              onupdatefiles={(fileItems) => {
+                if (fileItems.length > 0) {
+                  handleImageUpload(fileItems[0].file);
+                } else {
+                  setImageUrl("");
+                }
+              }}
             />
           </div>
 

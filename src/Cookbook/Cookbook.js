@@ -8,7 +8,6 @@ import DeleteDocumentButton from "./Delete";
 
 const Cookbook = () => {
   const [recipes, setRecipes] = useState([]);
-
   const user = useUser();
   const authorName = user.user.username;
 
@@ -35,7 +34,7 @@ const Cookbook = () => {
                   <h5 className="card-title">{recipe.data.recipeTitle}</h5>
                   <p className="card-text">{recipe.data.authorName}</p>
                   <Link
-                    to={`/recipes/${recipe.ref.id}`}
+                    to={`/recipes/${recipe.id}`}
                     className="btn btn-primary"
                   >
                     View Recipe

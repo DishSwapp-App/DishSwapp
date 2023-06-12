@@ -4,17 +4,26 @@ import "./recipe.css";
 import Lottie from "lottie-react";
 import animation from "./loader.json";
 import SharePage from "../Share/share";
-import CommentForm from "../Comments/commentForm";
-import Comments from "../Comments/showComments";
 import SanityComments from "../Comments/sanityComments";
+import SanityCommentForm from "../Comments/sanityCommentForm";
 
-function TestRecipe() {
+function SanityRecipe() {
+  const [refresh, setRefresh] = useState(false);
+  const [commentSubmitted, setCommentSubmitted] = useState(false);
   const [location] = useLocation();
   const pageLink = window.location.origin + location;
   const params = useRoute("/recipes/:id");
   const recipeId = params[1].id;
   const [recipe, setRecipe] = useState(null);
   const [error, setError] = useState(null);
+
+  const handleRefresh = () => {
+    setRefresh(!refresh);
+  };
+
+  const handleCommentSubmit = () => {
+    setCommentSubmitted(!commentSubmitted);
+  };
 
   useEffect(() => {
     fetch(
@@ -37,8 +46,6 @@ function TestRecipe() {
         <Lottie animationData={animation} />
       </div>
     );
-
-  console.log("Here:", recipe);
 
   return (
     <div className="recipe_container">
@@ -63,17 +70,20 @@ function TestRecipe() {
       <SharePage pageLink={pageLink} />
 
       <div className="comments">
-        <CommentForm recipe_id={recipeId} />
+        <SanityCommentForm
+          recipe_id={recipeId}
+          onRefresh={handleRefresh}
+          onCommentSubmit={handleCommentSubmit}
+        />
 
         <br></br>
-
         <h3>Comments</h3>
         <hr></hr>
 
-        <SanityComments recipe_id={recipeId} />
+        <SanityComments recipe_id={recipeId} key={commentSubmitted} />
       </div>
     </div>
   );
 }
 
-export default TestRecipe;
+export default SanityRecipe;

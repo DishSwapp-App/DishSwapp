@@ -1,24 +1,13 @@
 import React, { useState } from "react";
-import faunadb from "faunadb";
+import deleteRecipeById from "./SanityDelete";
 
-const fauna_key = process.env.REACT_APP_FAUNA_KEY;
-
-const q = faunadb.query;
-const client = new faunadb.Client({ secret: fauna_key });
-
-function DeleteDocumentButton(ref_Id) {
+function DeleteDocumentButton({ ref_Id }) {
   const [showConfirmation, setShowConfirmation] = useState(false);
+  console.log(ref_Id);
 
   const handleDelete = () => {
-    client
-      .query(q.Delete(q.Ref(q.Collection("recipes"), ref_Id.ref_Id)))
-      .then((response) => {
-        console.log("Document deleted: ", response);
-        window.location.reload(); // Refresh the page
-      })
-      .catch((error) => {
-        console.log("Error deleting document: ", error);
-      });
+    deleteRecipeById(ref_Id);
+    window.location.reload();
   };
 
   const handleCancel = () => {

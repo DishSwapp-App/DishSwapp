@@ -7,6 +7,7 @@ import animation from "./loader.json";
 import SharePage from "../Share/share";
 import CommentForm from "../Comments/commentForm";
 import Comments from "../Comments/showComments";
+import SanityCommentForm from "../Comments/sanityCommentForm";
 
 const fauna_key = process.env.REACT_APP_FAUNA_KEY;
 const client = new faunadb.Client({ secret: fauna_key });
@@ -71,7 +72,7 @@ function Recipe() {
       <SharePage pageLink={pageLink} />
 
       <div className="comments">
-        <CommentForm recipe_id={recipeId} />
+        <SanityCommentForm recipe_id={recipeId} />
 
         <br></br>
 

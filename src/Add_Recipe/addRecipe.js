@@ -1,5 +1,5 @@
-import Form from "./form";
 import "./add_recipe.css";
+import SanityForm from "./sanity_form";
 function AddRecipe() {
   return (
     <div className="add_recipe">
@@ -12,7 +12,7 @@ function AddRecipe() {
         <h3>Add Recipe</h3>
         <br></br>
 
-        <Form />
+        <SanityForm />
       </div>
     </div>
   );

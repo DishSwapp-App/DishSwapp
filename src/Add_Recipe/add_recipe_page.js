@@ -1,15 +1,12 @@
 import Login from "../Login/LoginPage";
 import { SignedIn, SignedOut } from "@clerk/clerk-react";
-import SanityForm from "./sanity_form";
-import Test from "../Test/test";
+import AddRecipe from "./addRecipe";
 function AddRecipePage() {
   return (
     <div>
       <SignedIn>
         <br></br>
-        <SanityForm />
-
-        <Test />
+        <AddRecipe />
       </SignedIn>
 
       <SignedOut>
