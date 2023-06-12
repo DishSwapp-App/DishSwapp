@@ -1,30 +1,38 @@
+/* Instructions:
+For all styles in form.js they must have the class "add_recipe_form" before it,
+then the class. 
+For styles in addRecipe.js it must have the class "add_recipe" before it, then the class. 
+This will let me know what styles are in what files. 
+*/
 
-.form-group{
+
+
+.add_recipe_form .form-group{
 
     margin: 10px;
 }
 
-button{
+.add_recipe_form button{
 
     margin: 5px;
 }
 
 
-.form-group {
+.add_recipe_form .form-group {
     margin-bottom: 1rem;
   }
   
-  label {
+.add_recipe_form label {
     display: block;
     margin-bottom: 0.5rem;
     font-weight: 600;
-  }
+}
   
-  input[type="text"],
+  .add_recipe_form input[type="text"],
   textarea,
   select {
     display: block;
-    width: 50% !important;
+    width: 100% !important;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -37,11 +45,11 @@ button{
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   }
   
-  input[type="file"] {
+  .add_recipe_form input[type="file"] {
     display: none;
   }
   
-  .custom-file-upload {
+  .add_recipe_form .custom-file-upload {
     display: inline-block;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
@@ -56,17 +64,17 @@ button{
     cursor: pointer;
   }
   
-  .custom-file-upload:hover {
+  .add_recipe_form .custom-file-upload:hover {
     border-color: #6c757d;
   }
   
-  .custom-file-upload:focus {
+  .add_recipe_form .custom-file-upload:focus {
     outline: none;
     border-color: #007bff;
     box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
   }
   
-  button[type="submit"] {
+  .add_recipe_form button[type="submit"] {
     display: block;
     margin-top: 1rem;
     padding: 0.375rem 0.75rem;
@@ -81,20 +89,20 @@ button{
     transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
   }
   
-  button[type="submit"]:hover,
-  button[type="submit"]:focus {
+  .add_recipe_form button[type="submit"]:hover,
+  .add_recipe_form button[type="submit"]:focus {
     color: #fff;
     background-color: #0069d9;
     border-color: #0062cc;
   }
   
-  input[type="text"]:hover,
+  .add_recipe_form input[type="text"]:hover,
   textarea:hover,
   select:hover {
     border-color: #6c757d;
   }
   
-  input[type="text"]:focus,
+  .add_recipe_form input[type="text"]:focus,
   textarea:focus,
   select:focus {
     border-color: #007bff;
@@ -102,9 +110,18 @@ button{
   }
   
   @media (min-width: 768px) {
-    input[type="text"],
+    .add_recipe_form input[type="text"],
     textarea,
     select {
       width: 50%;
     }
+  }
+
+
+  .add_recipe .form_section{
+
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    
   }

@@ -1,29 +1,21 @@
-import Form from "./form";
+import "./add_recipe.css";
+import SanityForm from "./sanity_form";
 function AddRecipe() {
-    return (
-    <div className="">
-    <br>
+  return (
+    <div className="add_recipe">
+      <br></br>
+      <br></br>
 
-    </br>
-    <br>
+      <br></br>
 
-</br>
+      <div className="form_section">
+        <h3>Add Recipe</h3>
+        <br></br>
 
-    <h3>Add Recipe</h3>
-    <br>
-
-</br>
-
-
-
-            <div>
-            <Form />
-            </div>
-   
-  
-
+        <SanityForm />
+      </div>
     </div>
-    );
-    }
-    
-    export default AddRecipe;
+  );
+}
+
+export default AddRecipe;

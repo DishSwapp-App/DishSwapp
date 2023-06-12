@@ -1,0 +1,13 @@
+.button{
+
+    background-color: #3D717C ;
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.socials {
+    display: flex;
+    justify-content: center;
+  }

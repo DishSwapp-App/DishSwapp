@@ -1,37 +1,22 @@
-import Dashboard from "./dashboard"
+import Dashboard from "./dashboard";
 import Login from "../Login/LoginPage";
-import {
+import { SignedIn, SignedOut } from "@clerk/clerk-react";
+import "./dashboard.css";
 
-      
-    SignedIn, 
-    SignedOut,
-
-    
-  } from "@clerk/clerk-react";
-
-function DashboardPage(){
-
-    return (
-
-
-        <div>
-
-        <SignedIn>
-
+function DashboardPage() {
+  return (
+    <div className="dashboard_Page">
+      <SignedIn>
         <Dashboard />
+      </SignedIn>
 
-        </SignedIn>
-
-        <SignedOut>
+      <SignedOut>
         <Login />
+      </SignedOut>
 
-        </SignedOut>
-
-
-
-
-        </div>
-    )
+      <br></br>
+    </div>
+  );
 }
 
-export default DashboardPage
+export default DashboardPage;
