@@ -1,5 +1,6 @@
 import "./App.css";
 import { Router, Route, Switch } from "wouter";
+import { createContext, useState } from "react";
 
 import { ClerkProvider } from "@clerk/clerk-react";
 //Pages import
@@ -15,28 +16,35 @@ import SanityCookbook from "./Cookbook/SanityCookbook";
 import AddRecipePage from "./Add_Recipe/add_recipe_page";
 const clerkPubKey = process.env.REACT_APP_CLERK_KEY;
 
+export const ThemeContext = createContext(null);
 function App() {
+  const [theme, setTheme] = useState("light");
+  const toggleTHeme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
   return (
     <ClerkProvider publishableKey={clerkPubKey}>
-      <div className="App">
-        <NavigationBar />
-        <Router>
-          <Switch>
-            <Route path="/login" component={Login}></Route>
-            <Route path="/" component={Landing}></Route>
-            <Route path="/about" component={About}></Route>
+      <ThemeContext.Provider value={{ theme, toggleTHeme }}>
+        <div className="App" id={theme}>
+          <NavigationBar />
+          <Router>
+            <Switch>
+              <Route path="/login" component={Login}></Route>
+              <Route path="/" component={Landing}></Route>
+              <Route path="/about" component={About}></Route>
 
-            <Route path="/dashboard" component={DashboardPage}></Route>
+              <Route path="/dashboard" component={DashboardPage}></Route>
 
-            <Route path="/add_recipe" component={AddRecipePage}></Route>
-            <Route path="/feed" component={RecipeFeed}></Route>
-            <Route path="/recipes/:id" component={SanityRecipe} />
-            <Route path="/cookbook" component={SanityCookbook} />
+              <Route path="/add_recipe" component={AddRecipePage}></Route>
+              <Route path="/feed" component={RecipeFeed}></Route>
+              <Route path="/recipes/:id" component={SanityRecipe} />
+              <Route path="/cookbook" component={SanityCookbook} />
 
-            <Route path="/donate" component={Donate} />
-          </Switch>
-        </Router>
-      </div>
+              <Route path="/donate" component={Donate} />
+            </Switch>
+          </Router>
+        </div>
+      </ThemeContext.Provider>
     </ClerkProvider>
   );
 }
