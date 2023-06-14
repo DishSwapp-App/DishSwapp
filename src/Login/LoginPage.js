@@ -1,36 +1,16 @@
-import React from 'react';
-import "./loginPage.css"
+import React from "react";
+import "./loginPage.css";
 
-import {SignIn,
-
-
-  } from "@clerk/clerk-react";
-
+import { SignIn } from "@clerk/clerk-react";
 
 function Login() {
-
-    return(
-
-        <div className='Login'>
-
-        <div className='login'>
-        
-
-      
-        <SignIn/>
-
-
-        </div>
-
-        
-
-    
-
-
-
-        </div>
-    )
+  return (
+    <div className="Login">
+      <div className="login">
+        <SignIn />
+      </div>
+    </div>
+  );
 }
 
-
-export default Login
+export default Login;

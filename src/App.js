@@ -28,20 +28,15 @@ function App() {
         <div className="App" id={theme}>
           <NavigationBar />
           <Router>
-            <Switch>
-              <Route path="/login" component={Login}></Route>
-              <Route path="/" component={Landing}></Route>
-              <Route path="/about" component={About}></Route>
-
-              <Route path="/dashboard" component={DashboardPage}></Route>
-
-              <Route path="/add_recipe" component={AddRecipePage}></Route>
-              <Route path="/feed" component={RecipeFeed}></Route>
-              <Route path="/recipes/:id" component={SanityRecipe} />
-              <Route path="/cookbook" component={SanityCookbook} />
-
-              <Route path="/donate" component={Donate} />
-            </Switch>
+            <Route path="/login" component={Login}></Route>
+            <Route path="/" component={Landing}></Route>
+            <Route path="/about" component={About}></Route>
+            <Route path="/dashboard" component={DashboardPage}></Route>
+            <Route path="/add_recipe" component={AddRecipePage}></Route>
+            <Route path="/feed" component={RecipeFeed}></Route>
+            <Route path="/recipes/:id" component={SanityRecipe} />
+            <Route path="/cookbook" component={SanityCookbook} />
+            <Route path="/donate" component={Donate} />
           </Router>
         </div>
       </ThemeContext.Provider>
