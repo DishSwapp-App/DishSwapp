@@ -25,6 +25,8 @@ then the class.
     background: linear-gradient(to bottom right, #F9B7A4, #3D717C);
     transition-delay: 0.3s;
     color: white;
+    padding: 5px;
+
     
   }
   
@@ -43,7 +45,7 @@ then the class.
 
 .navbar .sign_in{
     width: max-content;
-    margin: 5px;
+    margin: 10px;
 
 }
 
