@@ -7,6 +7,7 @@ function DashboardPage() {
   return (
     <div className="dashboard_Page">
       <SignedIn>
+        <h2>Dashboard</h2>
         <Dashboard />
       </SignedIn>
 
