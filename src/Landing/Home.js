@@ -11,10 +11,12 @@ const Landing = () => {
       <div className="landing">
         <section className="jumbotron text-center">
           <div className="container">
-            <h1 className="jumbotron-heading text-white mb-4">
-              Welcome to DishSwapp
-            </h1>
-            <p className="lead text-white">Collect, Collaborate, Cook.</p>
+            <div className="text">
+              <h1 className="jumbotron-heading text-white mb-4">
+                Welcome to DishSwapp
+              </h1>
+              <p className="lead text-white">Collect, Collaborate, Cook.</p>
+            </div>
             <br />
             <Link href="/dashboard" className="btn btn-lg btn-login mb-2">
               Login/Signup

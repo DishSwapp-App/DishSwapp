@@ -17,16 +17,20 @@ function NavigationBar() {
         src="https://i.ibb.co/9vKRQJG/Dish-Swapp.jpg"
         width="50"
         height="50"
-        className="d-inline-block align-top"
+        className="d-inline-block align-top logo"
       />{" "}
       <SignedIn>
-      <Link href="/dashboard" className="link app_name"> <b> DishSwapp</b> </Link>
+        <Link href="/dashboard" className="link app_name">
+          {" "}
+          <b> DishSwapp</b>{" "}
+        </Link>
       </SignedIn>
       <SignedOut>
-      <Link href="/" className="link app_name"> <b> DishSwapp</b> </Link>
-
+        <Link href="/" className="link app_name">
+          {" "}
+          <b> DishSwapp</b>{" "}
+        </Link>
       </SignedOut>
-
       <button
         className="navbar-toggler"
         type="button"
@@ -40,20 +44,29 @@ function NavigationBar() {
       >
         <ul className="navbar-nav mr-auto w-100">
           <li className="nav-item active">
-            <Link href="/dashboard" className="link"> Dashboard</Link>
+            <Link href="/dashboard" className="link">
+              {" "}
+              Dashboard
+            </Link>
           </li>
           <li className="nav-item">
-            <Link href="/about" className="link">About</Link>
+            <Link href="/about" className="link">
+              About
+            </Link>
           </li>
 
           <li className="nav-item">
-          <Link href="/donate" className="link">Donate</Link>
+            <Link href="/donate" className="link">
+              Donate
+            </Link>
           </li>
         </ul>
 
         <div className="sign_in">
           <SignedOut>
-            <Link href="/dashboard" className="link">Login</Link>
+            <Link href="/dashboard" className="link">
+              Login
+            </Link>
           </SignedOut>
         </div>
 

@@ -8,6 +8,19 @@ then the class.
     --blue: #3D717C;
   }
 
+  nav .logo{
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-right: 5px;
+
+  }
+
+
+  nav.navbar{
+    color: white !important;
+
+    background-color: #3D717C !important;
+  }
 .navbar li{
     margin: 5px;
     text-decoration: none;
@@ -26,13 +39,16 @@ then the class.
     transition-delay: 0.3s;
     color: white;
     padding: 5px;
+   
+  }
 
-    
+  .navbar-toggler{
+    background-color: white;
   }
   
 .navbar .link{
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 5px;
 
 }
