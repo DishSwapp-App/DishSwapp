@@ -3,6 +3,12 @@
     margin: 5px;
 }
 
+.recipe_container .author{
+
+    text-align: center;
+    text-transform: capitalize;
+}
+
 .recipeImg{
     max-width: 100%;
     height: auto;

@@ -28,5 +28,12 @@ export default {
       title: 'Recipe URL',
       type: 'string',
     },
+
+    {
+      name: 'recipeImages',
+      title: 'Recipe Images',
+      type: 'array',
+      of: [{type: 'string'}],
+    },
   ],
 }

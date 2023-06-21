@@ -50,6 +50,7 @@ function SanityRecipe() {
   return (
     <div className="recipe_container">
       <h1>{recipe.recipeTitle}</h1>
+      <p className="author">{recipe.authorName}</p>
       <img
         src={recipe.recipeURL}
         alt={recipe.recipeTitle}

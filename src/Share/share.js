@@ -1,8 +1,17 @@
-import React, { useState } from 'react';
-import { FacebookIcon, FacebookShareButton, TwitterIcon, TwitterShareButton, WhatsappShareButton, WhatsappIcon, TelegramShareButton, TelegramIcon } from 'react-share';
-import { Modal, Button } from 'react-bootstrap';
-import style from "./share.module.css"
-import { IoClipboardSharp } from "react-icons/io5"
+import React, { useState } from "react";
+import {
+  FacebookIcon,
+  FacebookShareButton,
+  TwitterIcon,
+  TwitterShareButton,
+  WhatsappShareButton,
+  WhatsappIcon,
+  TelegramShareButton,
+  TelegramIcon,
+} from "react-share";
+import { Modal, Button } from "react-bootstrap";
+import style from "./share.module.css";
+import { IoClipboardSharp } from "react-icons/io5";
 
 const SharePage = ({ pageLink }) => {
   const [showModal, setShowModal] = useState(false);
@@ -17,32 +26,42 @@ const SharePage = ({ pageLink }) => {
   return (
     <>
       <div>
-        <Button onClick={() => setShowModal(true)}>Share this Recipe</Button>
+        <Button
+          onClick={() => setShowModal(true)}
+          className={style.share_button}
+        >
+          Share Recipe
+        </Button>
         <Modal show={showModal} onHide={() => setShowModal(false)}>
           <Modal.Header closeButton>
             <Modal.Title>Share</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div className={style.socials}>
-            <FacebookShareButton url={pageLink}>
-              <FacebookIcon size={40} round />
-            </FacebookShareButton>
-            <TwitterShareButton url={pageLink} title="Check out this page!">
-              <TwitterIcon size={40} round />
-            </TwitterShareButton>
-            <WhatsappShareButton url={pageLink}>
+              <FacebookShareButton url={pageLink}>
+                <FacebookIcon size={40} round />
+              </FacebookShareButton>
+              <TwitterShareButton url={pageLink} title="Check out this page!">
+                <TwitterIcon size={40} round />
+              </TwitterShareButton>
+              <WhatsappShareButton url={pageLink}>
                 <WhatsappIcon size={40} round />
-            </WhatsappShareButton>
-            <TelegramShareButton url={pageLink}>
+              </WhatsappShareButton>
+              <TelegramShareButton url={pageLink}>
                 <TelegramIcon size={40} round />
-            </TelegramShareButton>
-            <button onClick={handleCopyLink} className={style.button}><IoClipboardSharp/></button> <br></br>
-            
+              </TelegramShareButton>
+              <button onClick={handleCopyLink} className={style.button}>
+                <IoClipboardSharp />
+              </button>{" "}
+              <br></br>
             </div>
           </Modal.Body>
           <Modal.Footer>
-          {showCopiedMessage && <p>Link copied!</p>} <span></span>
-            <Button className={style.button} onClick={() => setShowModal(false)}>
+            {showCopiedMessage && <p>Link copied!</p>} <span></span>
+            <Button
+              className="btn-primary btn"
+              onClick={() => setShowModal(false)}
+            >
               Close
             </Button>
           </Modal.Footer>
