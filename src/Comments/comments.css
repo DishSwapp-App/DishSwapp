@@ -23,12 +23,13 @@
 @media screen and (max-width: 500px) {
 
     input{
-        width: min-content;
+        width: 50%;
     }
 
     .comment_form .comment_group_button{
         padding: 3px;
         height: 50%;
+        width: min-content;
     }
 }
 
