@@ -1,5 +1,8 @@
 ### DIshSwapp
 
+Open-Source collaborative recipe site
+Check it out at dishswapp.org
+
 What is the next move?
 
 - [x] Implement comment feature. 
