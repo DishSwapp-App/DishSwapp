@@ -30,6 +30,12 @@ export default {
     },
 
     {
+      name: 'rotm',
+      title: 'ROTM',
+      type: 'boolean',
+    },
+
+    {
       name: 'recipeImages',
       title: 'Recipe Images',
       type: 'array',

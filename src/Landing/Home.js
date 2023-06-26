@@ -4,6 +4,7 @@ import "./home.css";
 import anim from "./food.json";
 import Lottie from "lottie-react";
 import Footer from "../Footer/footer";
+import ROTM from "../DishSwapp_ROTM/ROTM";
 
 const Landing = () => {
   return (
@@ -87,6 +88,8 @@ const Landing = () => {
           <Lottie animationData={anim}></Lottie>
         </div>
       </section>
+
+      <ROTM />
 
       <div>
         <Footer />

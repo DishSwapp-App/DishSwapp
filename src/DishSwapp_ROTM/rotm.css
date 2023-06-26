@@ -1,0 +1,22 @@
+.center{
+
+    text-align: center;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.rotm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+  }
+
+  
+  .card {
+    margin: 0 auto;
+    width: 100%;
+  }
+  

@@ -1,5 +1,5 @@
 import "./App.css";
-import { Router, Route, Switch } from "wouter";
+import { Router, Route } from "wouter";
 import { createContext, useState } from "react";
 
 import { ClerkProvider } from "@clerk/clerk-react";
