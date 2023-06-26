@@ -7,6 +7,10 @@ function DeleteDocumentButton({ ref_Id }) {
 
   const handleDelete = () => {
     deleteRecipeById(ref_Id);
+    handleReload();
+  };
+
+  const handleReload = () => {
     window.location.reload();
   };
 

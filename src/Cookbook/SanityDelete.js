@@ -1,4 +1,13 @@
-import { client } from "../client";
+import { createClient } from "@sanity/client";
+
+const token = process.env.REACT_APP_SANITY_TOKEN;
+
+const client = createClient({
+  projectId: "sbwpz8d0",
+  dataset: "production",
+  token: token,
+  useCdn: false,
+});
 
 async function deleteRecipeById(id) {
   try {

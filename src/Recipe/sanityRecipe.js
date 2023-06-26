@@ -60,14 +60,17 @@ function SanityRecipe() {
 
       <div className="ingredients">
         <h4>Ingredients:</h4>
-        <p>{recipe.recipeIngredients}</p>
+        <ul>
+          {recipe.recipeIngredients.split(",").map((ingredient, index) => (
+            <li key={index}>{ingredient.trim()}</li>
+          ))}
+        </ul>
       </div>
 
       <div className="instructions">
         <h4>Instructions:</h4>
         <p>{recipe.recipeInstructions}</p>
       </div>
-
 
       <div className="comments">
         <SanityCommentForm
@@ -83,10 +86,7 @@ function SanityRecipe() {
         <SanityComments recipe_id={recipeId} key={commentSubmitted} />
       </div>
 
-      
-
       <SharePage pageLink={pageLink} />
-
     </div>
   );
 }
