@@ -68,7 +68,6 @@ function SanityRecipe() {
         <p>{recipe.recipeInstructions}</p>
       </div>
 
-      <SharePage pageLink={pageLink} />
 
       <div className="comments">
         <SanityCommentForm
@@ -83,6 +82,11 @@ function SanityRecipe() {
 
         <SanityComments recipe_id={recipeId} key={commentSubmitted} />
       </div>
+
+      
+
+      <SharePage pageLink={pageLink} />
+
     </div>
   );
 }

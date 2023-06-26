@@ -95,8 +95,9 @@ export default function Form() {
               })
             );
             console.log(result);
-            setShowModal(true);
             formRef.current.reset();
+
+            setShowModal(true);
           } catch (error) {
             console.error(error);
           }
@@ -114,8 +115,9 @@ export default function Form() {
           })
         );
         console.log(result, authorName);
-        setShowModal(true);
         formRef.current.reset();
+
+        setShowModal(true);
       }
     } catch (error) {
       console.error(error);
