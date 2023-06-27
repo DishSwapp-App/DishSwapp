@@ -127,6 +127,24 @@ object-fit: cover;
         height: fit-content;
         display: flex;
         flex-direction: column;
-        gap: 11px;
+        gap: 10px;
         flex-shrink: inherit;
+        margin: 11px;
     }
+
+    @media only screen and (max-width: 768px) { 
+        #info { 
+          
+          gap: 55px; 
+
+        margin-bottom: 11px;
+
+         
+        } 
+      } 
+
+    
+
+    
+
+    

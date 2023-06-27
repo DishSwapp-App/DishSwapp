@@ -67,3 +67,11 @@
     .comments{
         margin: 5px;
     }
+
+    .recipe_container .sign-in{
+        margin: auto;
+        width: 100%;
+        justify-content: center;
+        display: flex;
+        height: 100%;
+    }

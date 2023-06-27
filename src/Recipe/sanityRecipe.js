@@ -7,6 +7,7 @@ import SharePage from "../Share/share";
 import SanityComments from "../Comments/sanityComments";
 import SanityCommentForm from "../Comments/sanityCommentForm";
 import { Helmet } from "react-helmet";
+import { SignedIn, SignedOut, RedirectToSignIn } from "@clerk/clerk-react";
 
 function SanityRecipe() {
   const [refresh, setRefresh] = useState(false);
@@ -17,6 +18,8 @@ function SanityRecipe() {
   const recipeId = params[1].id;
   const [recipe, setRecipe] = useState(null);
   const [error, setError] = useState(null);
+
+  console.log(pageLink);
 
   const handleRefresh = () => {
     setRefresh(!refresh);
@@ -50,54 +53,62 @@ function SanityRecipe() {
 
   return (
     <div className="recipe_container">
-      <Helmet>
-        <title>{recipe.recipeTitle}</title>
-        <meta name="description" content="DishSwapp" />
-        <link
-          rel="icon"
-          type="image/jpg"
-          sizes="350x350"
-          href="https://i.ibb.co/DRwMwFM/ce5330bf57f2.jpg"
-        ></link>
-      </Helmet>
-      <h1>{recipe.recipeTitle}</h1>
-      <p className="author">{recipe.authorName}</p>
-      <img
-        src={recipe.recipeURL}
-        alt={recipe.recipeTitle}
-        className="recipeImg"
-        width="auto"
-      />
-
-      <div className="ingredients">
-        <h4>Ingredients:</h4>
-        <ul>
-          {recipe.recipeIngredients.split(",").map((ingredient, index) => (
-            <li key={index}>{ingredient.trim()}</li>
-          ))}
-        </ul>
-      </div>
-
-      <div className="instructions">
-        <h4>Instructions:</h4>
-        <p>{recipe.recipeInstructions}</p>
-      </div>
-
-      <div className="comments">
-        <SanityCommentForm
-          recipe_id={recipeId}
-          onRefresh={handleRefresh}
-          onCommentSubmit={handleCommentSubmit}
+      <SignedIn>
+        <Helmet>
+          <title>{recipe.recipeTitle}</title>
+          <meta name="description" content={recipe.recipeTitle} />
+          <link
+            rel="icon"
+            type="image/jpg"
+            sizes="350x350"
+            href="https://i.ibb.co/DRwMwFM/ce5330bf57f2.jpg"
+          ></link>
+        </Helmet>
+        <h1>{recipe.recipeTitle}</h1>
+        <p className="author">{recipe.authorName}</p>
+        <img
+          src={recipe.recipeURL}
+          alt={recipe.recipeTitle}
+          className="recipeImg"
+          width="auto"
         />
 
-        <br></br>
-        <h3>Comments</h3>
-        <hr></hr>
+        <div className="ingredients">
+          <h4>Ingredients:</h4>
+          <ul>
+            {recipe.recipeIngredients.split(",").map((ingredient, index) => (
+              <li key={index}>{ingredient.trim()}</li>
+            ))}
+          </ul>
+        </div>
 
-        <SanityComments recipe_id={recipeId} key={commentSubmitted} />
-      </div>
+        <div className="instructions">
+          <h4>Instructions:</h4>
+          <p>{recipe.recipeInstructions}</p>
+        </div>
 
-      <SharePage pageLink={pageLink} />
+        <div className="comments">
+          <SanityCommentForm
+            recipe_id={recipeId}
+            onRefresh={handleRefresh}
+            onCommentSubmit={handleCommentSubmit}
+          />
+
+          <br></br>
+          <h3>Comments</h3>
+          <hr></hr>
+
+          <SanityComments recipe_id={recipeId} key={commentSubmitted} />
+        </div>
+
+        <SharePage pageLink={pageLink} />
+      </SignedIn>
+
+      <SignedOut>
+        <div className="sign-in">
+          <RedirectToSignIn afterSignInUrl={pageLink}></RedirectToSignIn>
+        </div>
+      </SignedOut>
     </div>
   );
 }
