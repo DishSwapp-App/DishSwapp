@@ -53,6 +53,12 @@ function SanityRecipe() {
       <Helmet>
         <title>{recipe.recipeTitle}</title>
         <meta name="description" content="DishSwapp" />
+        <link
+          rel="icon"
+          type="image/jpg"
+          sizes="350x350"
+          href="https://i.ibb.co/DRwMwFM/ce5330bf57f2.jpg"
+        ></link>
       </Helmet>
       <h1>{recipe.recipeTitle}</h1>
       <p className="author">{recipe.authorName}</p>
