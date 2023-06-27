@@ -6,6 +6,7 @@ import animation from "./loader.json";
 import SharePage from "../Share/share";
 import SanityComments from "../Comments/sanityComments";
 import SanityCommentForm from "../Comments/sanityCommentForm";
+import { Helmet } from "react-helmet";
 
 function SanityRecipe() {
   const [refresh, setRefresh] = useState(false);
@@ -49,6 +50,10 @@ function SanityRecipe() {
 
   return (
     <div className="recipe_container">
+      <Helmet>
+        <title>{recipe.recipeTitle}</title>
+        <meta name="description" content="DishSwapp" />
+      </Helmet>
       <h1>{recipe.recipeTitle}</h1>
       <p className="author">{recipe.authorName}</p>
       <img

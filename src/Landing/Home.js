@@ -1,8 +1,7 @@
 import React from "react";
 import { Link } from "wouter";
 import "./home.css";
-import anim from "./food.json";
-import Lottie from "lottie-react";
+import Anim from "./anim";
 import Footer from "../Footer/footer";
 import ROTM from "../DishSwapp_ROTM/ROTM";
 
@@ -81,15 +80,14 @@ const Landing = () => {
         </section>
       </div>
 
-      <section className="endpage">
-        <h3>Start Exploring Recipes</h3>
+      <br></br>
+      <br></br>
+      <br></br>
 
-        <div className="animation">
-          <Lottie animationData={anim}></Lottie>
-        </div>
+      <section id="info">
+        <Anim />
+        <ROTM />
       </section>
-
-      <ROTM />
 
       <div>
         <Footer />

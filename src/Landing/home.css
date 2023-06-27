@@ -98,11 +98,13 @@ object-fit: cover;
     }
 
     .animation{
-        width: 30%;
+        width: 10%;
         margin: auto;
         height: auto;
         text-align: center;
     }
+
+
 
     section{
         text-align: center;
@@ -118,4 +120,13 @@ object-fit: cover;
     .btn-login:hover{
         background-color: white  !important;
         color: #3D717C !important;
+    }
+
+    #info{
+
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        flex-shrink: inherit;
     }

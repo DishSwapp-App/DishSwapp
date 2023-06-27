@@ -29,7 +29,11 @@ function ROTM() {
     <div className="rotm">
       <Row className="justify-content-center card">
         <Col md={10} className="center">
-          <h3>DishSwapp Recipe Of The Month - {currentMonth}</h3>
+          <h3>DishSwapp Recipe Of The Month</h3>
+          <br></br>
+          <h4>{currentMonth}</h4>
+          <br></br>
+
           <Card sx={{ maxWidth: 400 }} className="center">
             <CardMedia
               sx={{ height: 140 }}
