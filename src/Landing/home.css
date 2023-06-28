@@ -73,7 +73,6 @@ object-fit: cover;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 10px;
     transition: all 0.3s ease-in-out;
     }
     
@@ -98,9 +97,9 @@ object-fit: cover;
     }
 
     .animation{
-        width: 10%;
+        width: 12%;
         margin: auto;
-        height: auto;
+        height: 30%;
         text-align: center;
     }
 
@@ -137,12 +136,18 @@ object-fit: cover;
           
           gap: 55px; 
 
-        margin-bottom: 11px;
+        margin-bottom: 30px;
 
          
         } 
+
+        .anim{
+            margin-bottom: 30px;
+          }
       } 
 
+
+     
     
 
     

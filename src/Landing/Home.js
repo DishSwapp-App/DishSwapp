@@ -86,6 +86,7 @@ const Landing = () => {
 
       <section id="info">
         <Anim />
+        <hr></hr>
         <ROTM />
       </section>
       <br></br>

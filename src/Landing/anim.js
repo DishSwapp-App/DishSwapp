@@ -1,10 +1,11 @@
 import React from "react";
 import animation from "./food.json";
 import Lottie from "lottie-react";
+import "./home.css";
 
 const Anim = () => {
   return (
-    <div>
+    <div className="anim">
       <section>
         <h3>Start Exploring Recipes</h3>
 

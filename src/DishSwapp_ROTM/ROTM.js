@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Row, Col } from "react-bootstrap";
 import { getRecipe } from "./getrotm";
 import Card from "@mui/material/Card";
 import CardActions from "@mui/material/CardActions";
@@ -27,8 +26,8 @@ function ROTM() {
 
   return (
     <div className="rotm">
-      <Row className="justify-content-center card">
-        <Col md={10} className="center">
+      <div className="justify-content-center">
+        <div md={10} className="center">
           <h3>DishSwapp Recipe Of The Month</h3>
           <br></br>
           <h4>{currentMonth}</h4>
@@ -55,8 +54,8 @@ function ROTM() {
               </Link>
             </CardActions>
           </Card>
-        </Col>
-      </Row>
+        </div>
+      </div>
     </div>
   );
 }
