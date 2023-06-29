@@ -86,7 +86,7 @@ const Landing = () => {
 
       <section id="info">
         <Anim />
-        <hr></hr>
+        <hr className="divider"></hr>
         <ROTM />
       </section>
       <br></br>

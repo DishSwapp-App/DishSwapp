@@ -141,10 +141,17 @@ object-fit: cover;
          
         } 
 
+        .landing .divider{
+            margin-bottom: 10px;
+          }
+
         .anim{
             margin-bottom: 30px;
           }
       } 
+
+
+     
 
 
      
