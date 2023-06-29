@@ -4,11 +4,13 @@ import React, { useRef, useState } from "react";
 import { useUser } from "@clerk/clerk-react";
 import { useForm } from "react-hook-form";
 import "./add_recipe.css";
-import { Tooltip as ReactTooltip } from "react-tooltip";
 import { FilePond, registerPlugin } from "react-filepond";
 import "filepond/dist/filepond.min.css";
 import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
+import IconButton from "@mui/material/IconButton";
+import Tooltip from "@mui/material/Tooltip";
+import { AiOutlineQuestionCircle } from "react-icons/ai";
 
 registerPlugin(FilePondPluginImagePreview);
 
@@ -113,6 +115,15 @@ function SanityForm() {
 
           <div className="form-group">
             <label htmlFor="recipeIngredients">Recipe Ingredients</label>
+            <div>
+              {" "}
+              <Tooltip title="Add a comma after each ingredient">
+                <IconButton>
+                  <AiOutlineQuestionCircle />{" "}
+                </IconButton>
+              </Tooltip>
+            </div>
+
             <textarea
               className="form-control"
               id="recipeIngredients"
@@ -128,9 +139,7 @@ function SanityForm() {
               id="recipeInstructions"
               rows="3"
               {...register("recipeInstructions")}
-              data-tip="Please separate each instruction using a comma"
             ></textarea>
-            <ReactTooltip />
           </div>
 
           <div className="form-group">
