@@ -4,7 +4,7 @@ import { createContext, useState } from "react";
 
 import { ClerkProvider } from "@clerk/clerk-react";
 //Pages import
-import Landing from "./Landing/Home";
+import Home from "./Home/Home";
 import Login from "./Login/LoginPage";
 import NavigationBar from "./Nav/nav";
 import About from "./About/about";
@@ -29,7 +29,7 @@ function App() {
           <NavigationBar />
           <Router>
             <Route path="/login" component={Login}></Route>
-            <Route path="/" component={Landing}></Route>
+            <Route path="/" component={Home}></Route>
             <Route path="/about" component={About}></Route>
             <Route path="/dashboard" component={DashboardPage}></Route>
             <Route path="/add_recipe" component={AddRecipePage}></Route>

@@ -51,3 +51,7 @@
     opacity: 0.5;
     cursor: not-allowed;
     }
+
+    .dashboard_Page{
+        height: 92vh;
+    }

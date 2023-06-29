@@ -19,18 +19,10 @@ function NavigationBar() {
         height="50"
         className="d-inline-block align-top logo"
       />{" "}
-      <SignedIn>
-        <Link href="/dashboard" className="link app_name">
-          {" "}
-          <b> DishSwapp</b>{" "}
-        </Link>
-      </SignedIn>
-      <SignedOut>
-        <Link href="/" className="link app_name">
-          {" "}
-          <b> DishSwapp</b>{" "}
-        </Link>
-      </SignedOut>
+      <Link href="/" className="link app_name">
+        {" "}
+        <b> DishSwapp</b>{" "}
+      </Link>
       <button
         className="navbar-toggler"
         type="button"

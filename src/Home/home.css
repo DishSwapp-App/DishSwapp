@@ -1,0 +1,162 @@
+
+:root {
+    --pink: #F9B7A4;
+    --blue: #3D717C;
+  }
+
+.lead{
+
+    font-family: Playfair !important;
+    font-size: 25px;
+}
+
+.home .text{
+    background-color: #3D717C;
+    width: max-content;
+    margin: auto;
+}
+
+.footer{
+
+    margin-top: 30px;
+}
+
+.jumbotron{
+background-image: url("https://i.ibb.co/rffkj95/hero-dishswapp.jpg");
+object-fit: cover;
+}
+   
+    .jumbotron-heading {
+    font-size: 40px;
+    font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+        .jumbotron-heading {
+          font-size: 25px;
+        }
+
+        .lead {
+            font-size: 15px;
+          
+            }
+      }
+    
+    .lead {
+    font-size: 20px;
+    font-weight: 400;
+    }
+    
+    .btn-danger {
+    background-color: var(--blue);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 10px;
+    padding: 10px 20px;
+    transition: all 0.3s ease-in-out;
+    }
+    
+   .btn-danger:hover {
+    background-color: whi4;
+    cursor: pointer;
+    border-radius: 10px;
+}
+    
+    .btn-danger:focus {
+    outline: none;
+    }
+    
+    .card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    }
+    
+    .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    
+    .card-img-top {
+    border-radius: 100px 10px 0px 10px;
+    }
+    
+    .card-title {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 10px;
+    }
+    
+    .home .card-text {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 10px;
+    }
+
+    .animation{
+        width: 12%;
+        margin: auto;
+        height: 30%;
+        text-align: center;
+    }
+
+
+
+    #info section{
+        text-align: center;
+    }
+
+
+    .btn-login{
+        background-color: #3D717C !important;
+        color: white !important;
+    }
+
+
+    .btn-login:hover{
+        background-color: white  !important;
+        color: #3D717C !important;
+    }
+
+    #info{
+
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        flex-shrink: inherit;
+        margin: 11px;
+    }
+
+    @media only screen and (max-width: 768px) { 
+        #info { 
+          
+          gap: 55px; 
+
+        margin-bottom: 30px;
+
+         
+        } 
+
+        .home .divider{
+            margin-bottom: 10px;
+          }
+
+        .anim{
+            margin-bottom: 30px;
+          }
+      } 
+
+
+     
+
+
+     
+    
+
+    
+
+    

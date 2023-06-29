@@ -43,14 +43,7 @@ function About() {
             own twist to an existing recipe, but you can't do anything about it.
             With DishSwapp, that frustration is a thing of the past.
           </p>
-          <p>
-            But we don't stop there. We know that food is not just about taste,
-            but also about presentation. That's why we allow you to post
-            pictures under recipe posts of your attempt at the recipe. Share
-            your success stories, your tips and tricks, and your challenges. We
-            believe that when you cook a meal, it becomes a part of you, and we
-            want to celebrate that.
-          </p>
+
           <p>
             At DishSwapp, we value collaboration and community. We believe that
             cooking should not be a solitary activity, but something that brings

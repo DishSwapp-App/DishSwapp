@@ -1,6 +1,7 @@
 import React from "react";
 import { TwitterIcon } from "react-share";
 import "./footer.css";
+import { appVersion } from "../version";
 
 const Footer = () => {
   return (
@@ -9,7 +10,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-md-4 mb-3">
             <h3 className="footer-heading">About Us</h3>
-            <p>We are currently in testing</p>
+            <p> DishSwapp Version: {appVersion}</p>
           </div>
           <div className="col-md-4 mb-3">
             <h3 className="footer-heading">Contact Us</h3>

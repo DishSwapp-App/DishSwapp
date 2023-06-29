@@ -7,7 +7,7 @@ const Dashboard = () => {
       <div className="container-fluid">
         <div
           className="row justify-content-center align-items-center"
-          style={{ height: "70vh" }}
+          style={{ height: "max-content" }}
         >
           <div className="col-md-4">
             <div className="card">
