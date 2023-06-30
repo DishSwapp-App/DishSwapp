@@ -1,9 +1,13 @@
 import React from "react";
 import "./donate.css";
+import { Helmet } from "react-helmet";
 
 const Donate = () => {
   return (
     <div className="donate">
+      <Helmet>
+        <title>Donate</title>
+      </Helmet>
       <h2 class="text-center mt-5">Help us do more awesome things!</h2>{" "}
       <div class="container">
         <div class="row">

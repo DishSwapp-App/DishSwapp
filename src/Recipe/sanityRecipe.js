@@ -61,7 +61,7 @@ function SanityRecipe() {
             rel="icon"
             type="image/jpg"
             sizes="350x350"
-            href="https://i.ibb.co/DRwMwFM/ce5330bf57f2.jpg"
+            href="https://i.ibb.co/swRDJLK/2ac647b5ec26.jpg"
           ></link>
         </Helmet>
         <h1>{recipe.recipeTitle}</h1>

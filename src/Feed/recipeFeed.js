@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import "./feed.css";
+import { Helmet } from "react-helmet";
 
 function RecipeFeed() {
   const [recipes, setRecipes] = useState([]);
@@ -30,6 +31,9 @@ function RecipeFeed() {
 
   return (
     <div className="feed">
+      <Helmet>
+        <title>Feed</title>
+      </Helmet>
       <LazyLoadComponent>
         <div className="container">
           <h1>Recipes</h1>

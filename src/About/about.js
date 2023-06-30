@@ -1,9 +1,14 @@
 import React from "react";
 import "./about.css";
+import { Helmet } from "react-helmet";
 
 function About() {
   return (
     <div className="about card">
+      <Helmet>
+        <title>About DishSwapp</title>
+        <meta name="description" content="About DishSwapp" />
+      </Helmet>
       <style>
         {`
           .hero-image {

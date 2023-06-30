@@ -3,6 +3,8 @@ import { Link } from "wouter";
 import { LazyLoadComponent } from "react-lazy-load-image-component";
 import { useUser } from "@clerk/clerk-react";
 import styles from "./cookbook.module.css";
+import { Helmet } from "react-helmet";
+
 import DeleteDocumentButton from "./Delete";
 import getRecipesByAuthor from "./getSanityRecipes";
 import { SignedIn, RedirectToSignIn, SignedOut } from "@clerk/clerk-react";
@@ -26,6 +28,10 @@ function SanityCookbook() {
 
   return (
     <div>
+      <Helmet>
+        <title>Cookbook</title>
+        <meta name="description" content="Cookbook" />
+      </Helmet>
       <SignedIn>
         <LazyLoadComponent>
           <div className={styles.container}>

@@ -5,10 +5,14 @@ import Anim from "./anim";
 import Footer from "../Footer/footer";
 import ROTM from "../DishSwapp_ROTM/ROTM";
 import { SignedOut } from "@clerk/clerk-react";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
     <>
+      <Helmet>
+        <title>Home</title>
+      </Helmet>
       <div className="home">
         <section className="jumbotron text-center">
           <div className="container">
