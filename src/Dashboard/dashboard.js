@@ -1,7 +1,12 @@
 import React from "react";
 import { Link } from "wouter";
 import "./dashboard.css";
+import { useUser } from "@clerk/clerk-react";
+
 const Dashboard = () => {
+  const user = useUser();
+  const authorName = user.user.username;
+
   return (
     <div className="dashboard">
       <div className="container-fluid">
@@ -50,7 +55,7 @@ const Dashboard = () => {
                 <p className="card-text">
                   View and manage your uploaded recipes.
                 </p>
-                <Link href="/cookbook">
+                <Link to="/cookbook" state={{ data: authorName }}>
                   <button
                     type="button"
                     className="btn btn-primary btn-lg btn-block"

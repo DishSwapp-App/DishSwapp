@@ -12,8 +12,8 @@ import DashboardPage from "./Dashboard/DashboardPage";
 import Donate from "./Donate/donate";
 import SanityRecipe from "./Recipe/sanityRecipe";
 import RecipeFeed from "./Feed/recipeFeed";
-import SanityCookbook from "./Cookbook/SanityCookbook";
 import AddRecipePage from "./Add_Recipe/add_recipe_page";
+import Cookbook from "./Cookbook/Cookbook";
 const clerkPubKey = process.env.REACT_APP_CLERK_KEY;
 
 export const ThemeContext = createContext(null);
@@ -35,7 +35,7 @@ function App() {
             <Route path="/add_recipe" component={AddRecipePage}></Route>
             <Route path="/feed" component={RecipeFeed}></Route>
             <Route path="/recipes/:id" component={SanityRecipe} />
-            <Route path="/cookbook" component={SanityCookbook} />
+            <Route path="/cookbook" component={Cookbook} />
             <Route path="/donate" component={Donate} />
           </Router>
         </div>

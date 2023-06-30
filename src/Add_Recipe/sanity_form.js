@@ -76,6 +76,8 @@ function SanityForm() {
           },
         }
       );
+      formRef.current.reset();
+
       setShowModal(true);
     } catch (error) {
       console.error("Error submitting form: ", error);

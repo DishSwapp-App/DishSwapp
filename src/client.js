@@ -5,5 +5,5 @@ export const client = createClient({
   projectId: "sbwpz8d0",
   dataset: "production",
   token: token,
-  useCdn: true,
+  useCdn: false,
 });

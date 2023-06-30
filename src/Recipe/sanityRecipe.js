@@ -19,8 +19,6 @@ function SanityRecipe() {
   const [recipe, setRecipe] = useState(null);
   const [error, setError] = useState(null);
 
-  console.log(pageLink);
-
   const handleRefresh = () => {
     setRefresh(!refresh);
   };

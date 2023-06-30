@@ -1,13 +1,21 @@
 import React, { useState } from "react";
 import deleteRecipeById from "./SanityDelete";
+import { Modal, Button } from "react-bootstrap";
 
 function DeleteDocumentButton({ ref_Id }) {
   const [showConfirmation, setShowConfirmation] = useState(false);
-  console.log(ref_Id);
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleModalClose = () => {
+    setShowModal(false);
+    handleReload();
+  };
 
   const handleDelete = () => {
     deleteRecipeById(ref_Id);
-    handleReload();
+    //handle show  modal here after the delete is pressed
+    setShowModal(true);
   };
 
   const handleReload = () => {
@@ -52,6 +60,18 @@ function DeleteDocumentButton({ ref_Id }) {
           </button>
         </div>
       )}
+
+      <Modal show={showModal} onHide={handleModalClose}>
+        <Modal.Header>
+          <Modal.Title>Recipe deleted</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>The recipe has been successfully deleted.</Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleModalClose}>
+            Close
+          </Button>
+        </Modal.Footer>
+      </Modal>
     </>
   );
 }
