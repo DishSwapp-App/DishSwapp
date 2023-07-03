@@ -35,7 +35,7 @@ function ROTM() {
 
           <Card sx={{ maxWidth: 400 }} className="center">
             <CardMedia
-              sx={{ height: 140 }}
+              sx={{ height: 300 }}
               image={recipe?.recipeURL}
               title={recipe?.recipeTitle}
             />
@@ -44,8 +44,8 @@ function ROTM() {
                 {recipe?.recipeTitle}
               </Typography>
               <Typography variant="body2" color="text.secondary">
-                Ever Tried brownies from scratch? This month's ROTM is an
-                amazing rich brownie recipe you have to try!
+                Looking for a healthy and tasty smoothie recipe? We have the
+                perfect one! Try it now.
               </Typography>
             </CardContent>
             <CardActions>

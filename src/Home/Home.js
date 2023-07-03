@@ -93,10 +93,9 @@ const Home = () => {
 
       <section id="info">
         <Anim />
-        <hr className="divider"></hr>
+        <hr class="border border-danger border-2 opacity-50 divider"></hr>
         <ROTM />
       </section>
-      <br></br>
       <br></br>
 
       <div>

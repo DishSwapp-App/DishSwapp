@@ -41,5 +41,12 @@ export default {
       type: 'array',
       of: [{type: 'string'}],
     },
+
+    {
+      name: 'tags',
+      title: 'Recipe Tags',
+      type: 'array',
+      of: [{type: 'string'}],
+    },
   ],
 }
