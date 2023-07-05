@@ -1,5 +1,6 @@
 .dashboard .container-fluid {
     background-color: #f5f5f5;
+    
     padding: 50px;
     }
     
@@ -42,16 +43,23 @@
     background-color: #0d8bf2;
     cursor: pointer;
     }
+
+    .dashboard .btn {
+        background-color: #3D717C;
+        color: white;
+      }
+      
+      .dashboard .btn:hover {
+        background-color: #5C9CA8;
+      }
     
     .dashboard .btn-primary:focus {
     outline: none;
     }
     
-    .dashboard .btn-primary:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
-    }
 
     .dashboard_Page{
         height: 92vh;
+    background-color: #f5f5f5;
+
     }

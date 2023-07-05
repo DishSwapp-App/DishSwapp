@@ -20,10 +20,7 @@ const Dashboard = () => {
                 <h5 className="card-title">Recipe Feed</h5>
                 <p className="card-text">View and Explore Recipes</p>
                 <Link href="/feed">
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-lg btn-block"
-                  >
+                  <button type="button" className="btn btn-lg btn-block">
                     View Recipes
                   </button>
                 </Link>
@@ -37,10 +34,7 @@ const Dashboard = () => {
                 <h5 className="card-title">Add Recipe</h5>
                 <p className="card-text">Click here to add a new recipe.</p>
                 <Link href="/add_recipe">
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-lg btn-block"
-                  >
+                  <button type="button" className="btn btn-lg btn-block">
                     Add Recipe
                   </button>
                 </Link>
@@ -56,10 +50,7 @@ const Dashboard = () => {
                   View and manage your uploaded recipes.
                 </p>
                 <Link to="/cookbook" state={{ data: authorName }}>
-                  <button
-                    type="button"
-                    className="btn btn-primary btn-lg btn-block"
-                  >
+                  <button type="button" className="btn btn-lg btn-block">
                     My Cookbook
                   </button>
                 </Link>
