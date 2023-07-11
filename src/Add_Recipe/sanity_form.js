@@ -8,8 +8,7 @@ import { FilePond, registerPlugin } from "react-filepond";
 import "filepond/dist/filepond.min.css";
 import FilePondPluginImagePreview from "filepond-plugin-image-preview";
 import "filepond-plugin-image-preview/dist/filepond-plugin-image-preview.css";
-import IconButton from "@mui/material/IconButton";
-import Tooltip from "@mui/material/Tooltip";
+import { Tooltip } from "@mantine/core";
 import { AiOutlineQuestionCircle } from "react-icons/ai";
 
 registerPlugin(FilePondPluginImagePreview);
@@ -119,10 +118,8 @@ function SanityForm() {
             <label htmlFor="recipeIngredients">Recipe Ingredients</label>
             <div>
               {" "}
-              <Tooltip title="Add a comma after each ingredient">
-                <IconButton>
-                  <AiOutlineQuestionCircle />{" "}
-                </IconButton>
+              <Tooltip label="Add a comma after each ingredient">
+                <AiOutlineQuestionCircle />{" "}
               </Tooltip>
             </div>
 

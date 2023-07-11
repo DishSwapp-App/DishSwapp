@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { getRecipe } from "./getrotm";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import CardMedia from "@mui/material/CardMedia";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import { Card } from "@mantine/core";
+import { CardContent } from "semantic-ui-react";
+import { Image } from "@mantine/core";
+import { Button } from "@mantine/core";
+import { CardHeader } from "semantic-ui-react";
 import { Link } from "wouter";
 import "./rotm.css";
 
@@ -34,25 +33,17 @@ function ROTM() {
           <br></br>
 
           <Card sx={{ maxWidth: 400 }} className="center">
-            <CardMedia
-              sx={{ height: 300 }}
-              image={recipe?.recipeURL}
-              title={recipe?.recipeTitle}
-            />
+            <Image src={recipe?.recipeURL} alt={recipe?.recipeTitle} />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="div">
-                {recipe?.recipeTitle}
-              </Typography>
-              <Typography variant="body2" color="text.secondary">
-                Looking for a healthy and tasty smoothie recipe? We have the
-                perfect one! Try it now.
-              </Typography>
+              <CardHeader>{recipe?.recipeTitle}</CardHeader>
+              <br></br>
+              Looking for a healthy and tasty smoothie recipe? We have the
+              perfect one! Try it now.
             </CardContent>
-            <CardActions>
-              <Link to={`/recipes/${recipe?._id}`}>
-                <Button size="small">See Recipe</Button>
-              </Link>
-            </CardActions>
+
+            <Link to={`/recipes/${recipe?._id}`}>
+              <Button size="md">See Recipe</Button>
+            </Link>
           </Card>
         </div>
       </div>

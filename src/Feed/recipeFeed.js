@@ -48,7 +48,7 @@ function RecipeFeed() {
           </div>
           <div className="row row-cols-1 row-cols-md-3 g-4">
             {filteredRecipes.map((recipe) => (
-              <div key={recipe._id} className="col">
+              <div key={recipe._id} className="col recipe_item">
                 <div className="card shadow-sm">
                   <img src={recipe.recipeURL} alt={recipe.recipeTitle} />
                   <div className="card-body">

@@ -5,15 +5,20 @@
 .comment_form .avatar{
 
     width: 30px;
-    ;
+    
 }
 
+.comment_text{
+
+    color: black;
+}
 
 .comment_form .comment_group{
 
     display: flex;
     margin-top: 20px;
 }
+
 
 .comment_form .comment_group_button{
     padding: 7px;
