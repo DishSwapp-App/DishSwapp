@@ -52,6 +52,8 @@ function NavigationBar() {
               Donate
             </Link>
           </li>
+
+          <li></li>
         </ul>
 
         <div className="sign_in">

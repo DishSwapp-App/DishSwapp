@@ -31,12 +31,15 @@ function SanityCookbook({ name }) {
       <SignedIn>
         <LazyLoadComponent>
           <div className={styles.container}>
-            <h1>{authorName}'s Cookbook</h1>
+            <h1>
+              {" "}
+              <span className={styles.authorName}>{authorName}'s </span>
+              Cookbook
+            </h1>
 
             {hasRecipes ? (
               <>
                 <hr />
-
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                   {recipes.map((recipe) => (
                     <div key={recipe._id} className="col">

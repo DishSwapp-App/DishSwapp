@@ -40,7 +40,13 @@ background: linear-gradient(to bottom, #959595 0%,#0d0d0d 46%,#010101 50%,#0a0a0
 
 #dark nav a{
 
- 
     
 
 }
+
+
+.toggle {
+    display: flex;
+    justify-content: center;
+    background-color: #3D717C ;
+  }

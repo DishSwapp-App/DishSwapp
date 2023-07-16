@@ -11,3 +11,8 @@ h1{
 .row{
     margin: 5px;
 }
+
+.authorName{
+
+    text-transform: capitalize;
+}

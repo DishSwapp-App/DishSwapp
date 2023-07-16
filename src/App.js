@@ -1,7 +1,7 @@
 import "./App.css";
 import { Router, Route } from "wouter";
 import { createContext, useState } from "react";
-
+import { Switch } from "@mantine/core";
 import { ClerkProvider } from "@clerk/clerk-react";
 //Pages import
 import Home from "./Home/Home";
@@ -13,18 +13,22 @@ import Donate from "./Donate/donate";
 import SanityRecipe from "./Recipe/sanityRecipe";
 import RecipeFeed from "./Feed/recipeFeed";
 import AddRecipePage from "./Add_Recipe/add_recipe_page";
-import Cookbook from "./Cookbook/Cookbook";
+import Cookbook from "./Cookbook/CookbookPage";
+
 const clerkPubKey = process.env.REACT_APP_CLERK_KEY;
 
 export const ThemeContext = createContext(null);
 function App() {
   const [theme, setTheme] = useState("light");
-  const toggleTHeme = () => {
+  const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
   return (
     <ClerkProvider publishableKey={clerkPubKey}>
-      <ThemeContext.Provider value={{ theme, toggleTHeme }}>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <div className="toggle">
+          <Switch label={theme} onClick={toggleTheme} color="red" />
+        </div>
         <div className="App" id={theme}>
           <NavigationBar />
           <Router>
