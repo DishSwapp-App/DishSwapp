@@ -37,8 +37,7 @@ function ROTM() {
             <CardContent>
               <CardHeader>{recipe?.recipeTitle}</CardHeader>
               <br></br>
-              Looking for a healthy and tasty smoothie recipe? We have the
-              perfect one! Try it now.
+             Try this refreshing and tasty dominican beverage for yourself and your family!
             </CardContent>
 
             <Link to={`/recipes/${recipe?._id}`}>
